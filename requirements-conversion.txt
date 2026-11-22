@@ -1,0 +1,15 @@
+# Headless dependencies for the pinned v2e-1.7.0 conversion path.
+# Install CUDA PyTorch separately as described in README.md.
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+numba==0.61.2
+h5py>=3.8,<4
+matplotlib>=3.7,<3.10
+pandas>=2,<3
+Pillow>=9.5
+tqdm>=4.66
+argcomplete
+engineering-notation
+easygui
+screeninfo
+plyer

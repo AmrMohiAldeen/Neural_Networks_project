@@ -1,0 +1,159 @@
+[
+  {
+    "root": "/home/nndl1/data/ekman6_videoemotion8",
+    "bytes": 24922488806,
+    "extensions": {
+      ".txt": 2,
+      ".pkl": 2,
+      ".zip": 1,
+      ".json": 1
+    },
+    "samples": {
+      ".txt": [
+        "ekman6_blacklist.txt",
+        "readme.txt"
+      ],
+      ".pkl": [
+        "ekman6_features.pkl",
+        "videoemotion8_features.pkl"
+      ],
+      ".zip": [
+        "videos.zip"
+      ],
+      ".json": [
+        "zenodo_record.json"
+      ]
+    },
+    "metadata": [
+      {
+        "path": "ekman6_blacklist.txt",
+        "bytes": 10206,
+        "preview": [
+          "anger/3093008706_97381d4539_700.mp4",
+          "anger/3245211604_22edb1f862_700.mp4",
+          "anger/4038861632_af2b1a16b4_700.mp4"
+        ]
+      },
+      {
+        "path": "readme.txt",
+        "bytes": 4785,
+        "preview": [
+          "Created by Serkan Sulun (serkan.sulun@inesctec.pt)",
+          "",
+          "2025-09-19 Update: Raw videos added."
+        ]
+      },
+      {
+        "path": "zenodo_record.json",
+        "bytes": 5670
+      }
+    ],
+    "archives": [
+      {
+        "path": "/home/nndl1/data/ekman6_videoemotion8/videos.zip",
+        "members": 1644,
+        "uncompressed_bytes": 23127475640,
+        "sample": [
+          "videos/",
+          "videos/anger/",
+          "videos/anger/TigerWoodsAngerProblems.mp4",
+          "videos/anger/ToyotavsPorsche[RoadRage]2013.mp4",
+          "videos/anger/Very_Angry_Teachers_Fail_Compilation.mp4",
+          "videos/anger/[Vimeo-]-25.mp4",
+          "videos/anger/[Vimeo-].mp4",
+          "videos/anger/01.mp4",
+          "videos/anger/12.mp4",
+          "videos/anger/19.mp4",
+          "videos/anger/28.mp4",
+          "videos/anger/29.mp4",
+          "videos/anger/3093008706_97381d4539_700.mp4",
+          "videos/anger/32.mp4",
+          "videos/anger/3245211604_22edb1f862_700.mp4"
+        ]
+      }
+    ]
+  },
+  {
+    "root": "/home/nndl1/data/google_drive_dataset",
+    "bytes": 9080467302,
+    "extensions": {
+      ".zip": 3
+    },
+    "samples": {
+      ".zip": [
+        "event_frames.zip",
+        "event_raw.zip",
+        "rgb_frames.zip"
+      ]
+    },
+    "metadata": [],
+    "archives": [
+      {
+        "path": "/home/nndl1/data/google_drive_dataset/event_frames.zip",
+        "members": 37761,
+        "uncompressed_bytes": 431722395,
+        "sample": [
+          "event_frames/",
+          "event_frames/user_00/",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_00.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_01.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_02.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_03.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_04.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_05.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_06.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_07.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_08.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_09.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_10.png",
+          "event_frames/user_00/user00_2022-06-08_11-52-05_cd/frame_11.png"
+        ]
+      },
+      {
+        "path": "/home/nndl1/data/google_drive_dataset/event_raw.zip",
+        "members": 1237,
+        "uncompressed_bytes": 2916999605,
+        "sample": [
+          "raw/",
+          "raw/user_00/",
+          "raw/user_00/user00_2022-06-08_11-52-05.bias",
+          "raw/user_00/user00_2022-06-08_11-52-05.raw",
+          "raw/user_00/user00_2022-06-08_11-53-45.bias",
+          "raw/user_00/user00_2022-06-08_11-53-45.raw",
+          "raw/user_00/user00_2022-06-08_11-56-29.bias",
+          "raw/user_00/user00_2022-06-08_11-56-29.raw",
+          "raw/user_00/user00_2022-06-08_11-57-02.bias",
+          "raw/user_00/user00_2022-06-08_11-57-02.raw",
+          "raw/user_00/user00_2022-06-08_11-57-56.bias",
+          "raw/user_00/user00_2022-06-08_11-57-56.raw",
+          "raw/user_00/user00_2022-06-08_11-58-34.bias",
+          "raw/user_00/user00_2022-06-08_11-58-34.raw",
+          "raw/user_00/user00_2022-06-08_12-00-41.bias"
+        ]
+      },
+      {
+        "path": "/home/nndl1/data/google_drive_dataset/rgb_frames.zip",
+        "members": 30658,
+        "uncompressed_bytes": 7204755683,
+        "sample": [
+          "rgb_frames/",
+          "rgb_frames/user_00/",
+          "rgb_frames/user_00/02/",
+          "rgb_frames/user_00/02/frame_00.png",
+          "rgb_frames/user_00/02/frame_01.png",
+          "rgb_frames/user_00/02/frame_02.png",
+          "rgb_frames/user_00/02/frame_03.png",
+          "rgb_frames/user_00/02/frame_04.png",
+          "rgb_frames/user_00/02/frame_05.png",
+          "rgb_frames/user_00/02/frame_06.png",
+          "rgb_frames/user_00/02/frame_07.png",
+          "rgb_frames/user_00/02/frame_08.png",
+          "rgb_frames/user_00/02/frame_09.png",
+          "rgb_frames/user_00/02/frame_10.png",
+          "rgb_frames/user_00/02/frame_11.png"
+        ]
+      }
+    ]
+  }
+]

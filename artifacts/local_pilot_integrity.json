@@ -1,0 +1,21 @@
+{
+  "format": "v2e-1.7.0 H5",
+  "timestamp_unit": "microseconds",
+  "width": 336,
+  "height": 224,
+  "valid": [
+    {
+      "path": "data\\events_pilot\\first_clip\\events.h5",
+      "events": 523826,
+      "duration_seconds": 1.995556,
+      "first_timestamp_us": 4444,
+      "last_timestamp_us": 2000000,
+      "polarities": [
+        0,
+        1
+      ]
+    }
+  ],
+  "invalid": [],
+  "missing": []
+}

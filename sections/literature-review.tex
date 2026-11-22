@@ -1,0 +1,55 @@
+\section{Literature Review and State-of-the-Art Synthesis}
+\label{sec:related}
+
+\subsection{What events preserve and what simulation changes}
+An event camera reports an event $e_i=(x_i,y_i,t_i,p_i)$ when the change in log brightness at a pixel crosses a threshold. The polarity $p_i$ distinguishes increases from decreases. Rapid changes near the eyebrows, eyelids, and mouth can therefore produce a useful temporal signal even when those movements are poorly resolved by a conventional frame camera \cite{berlincioni2023,zhang2023}. The same sensor also responds to head motion, lighting changes, and noise. A burst of events can correspond to a facial action, a change in illumination, or both. An event stream alone does not identify the cause.
+
+Video-to-event conversion provides a source of labeled sequences without requiring new event-camera recordings. The v2e simulator models pixel threshold variation, intensity-dependent bandwidth, and noise. Hu \emph{et al.} found that simulating different illumination settings improved transfer in an object recognition experiment \cite{hu2021}. Stoffregen \emph{et al.} likewise found that varying simulated contrast thresholds improved transfer for reconstruction and optical flow \cite{stoffregen2020}. These results motivate checking whether an expression classifier relies on absolute event counts. They do not establish that count normalization will help: counts also reflect how strongly a person moves, and video conversion cannot recover movements missing from the original frames.
+
+\begin{table*}[!t]
+\centering
+\caption{Closely related event-based facial expression studies. Results are reported by the original authors under different protocols and should be read within each row.}
+\label{tab:related}
+\small
+\begin{tabularx}{\textwidth}{@{}p{.13\textwidth} p{.15\textwidth} Y Y p{.18\textwidth} Y@{}}
+\toprule
+Study & Dataset & Event representation & Neural architecture & Metric and finding & Limitation for this study \\
+\midrule
+NEFER baseline \cite{berlincioni2023}
+& NEFER; real full-face events with paired RGB
+& Temporal Binary Representation (TBR) from 15-ms occupancy bins
+& C3D on stacked event frames
+& Best event accuracy: 30.95\%; best RGB accuracy: 14.60\% across the two label variants.
+& Trained and evaluated within NEFER; no simulated-source transfer test. \\
+\addlinespace
+SEEN \cite{zhang2023}
+& SEE; real single-eye recordings under four lighting conditions
+& Sampled event windows and synchronous intensity frames
+& Spiking event branch and CNN image branch with temporal fusion
+& Gains of 4.8 and 4.6 points in weighted and unweighted average recall over the runner-up.
+& Single-eye region and paired frames differ from full-face, event-only input. \\
+\addlinespace
+evTransFER \cite{verschae2026}
+& e-CK+ (simulated); NEFER (real)
+& Temporal Information of Events (TIE), based on an event spike tensor
+& Reconstruction-pretrained U-Net encoder with an LSTM classifier
+& Accuracy: 93.6\% on e-CK+ and up to 76.7\% on NEFER.
+& Published scores do not measure the fixed Emo-DVS-to-NEFER, source-only comparison proposed here. \\
+\addlinespace
+Emo-DVS / IGF \cite{chen2026}
+& Emo-DVS; simulated emotion recordings and real facial action units
+& Event frames in 5-ms windows; multimodal variant also uses audio and text
+& CLIP spatial encoder, temporal Transformer and information-guided fusion
+& VideoEmotion8* accuracy: 42.54\% with event, audio and text versus 29.61\% with events alone (Table~5).
+& Fusion result depends on other modalities; real action-unit labels differ from real emotion labels. \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{What current benchmarks establish}
+Table~\ref{tab:related} shows three kinds of evidence. NEFER establishes that real full-face events can support expression classification in a controlled setting. It supplies labels based on the intended stimulus and on what the participant reported feeling. The two labels can disagree, creating a source of error even with a clean recording \cite{berlincioni2023}. SEEN shows that temporal event features can complement intensity frames under changing light, but it uses close-up recordings of one eye and access to both modalities \cite{zhang2023}.
+
+More recent systems show the value of pretraining. evTransFER transfers a face-reconstruction encoder into a classifier that models expressions over time \cite{verschae2026}. Emo-DVS separates real facial action-unit recordings from simulated emotion-labeled video and uses the real action-unit data to pretrain its event encoder \cite{chen2026}. This separation matters: identifying an observable muscle movement and predicting a clip's emotion annotation are different tasks. A frozen visual foundation model such as DINOv2 offers a simpler starting point for a controlled study: the same pretrained weights can be used in every condition, leaving the event representation as the tested change \cite{oquab2024}. DINOv2 was trained on images, so its usefulness on sparse event frames remains an empirical question.
+
+\subsection{Research gap}
+The studies above establish that event data can support facial expression recognition and that representation and pretraining matter. They do not tell us whether changing how each event frame is scaled improves transfer from simulated emotion clips to real full-face recordings when the network, label set, and training data are fixed. We will test whether reducing the influence of unusually high event counts within individual temporal bins improves source-only transfer from Emo-DVS to NEFER. We treat the difference between source and target test scores as a \emph{cross-dataset transfer gap}: recording conditions, expression elicitation, and annotation change alongside the sensor, so the score difference cannot be attributed to simulation alone.

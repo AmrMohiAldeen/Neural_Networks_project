@@ -1,0 +1,66 @@
+[
+  {
+    "root": "/home/nndl1/data/raw/videos",
+    "bytes": 23127475640,
+    "extensions": {
+      ".mp4": 1637
+    },
+    "samples": {
+      ".mp4": [
+        "anger/01.mp4",
+        "anger/02.mp4",
+        "anger/03.mp4",
+        "anger/04.mp4",
+        "anger/10AnnoyingThingsCarPassengersDo[Part1].mp4",
+        "anger/10AnnoyingThingsCarPassengersDo[Part2].mp4",
+        "anger/11.mp4",
+        "anger/12.mp4"
+      ]
+    },
+    "metadata": [],
+    "archives": []
+  },
+  {
+    "root": "/home/nndl1/data/nefer/raw",
+    "bytes": 2916999605,
+    "extensions": {
+      ".bias": 598,
+      ".raw": 597,
+      ".tmp_index": 12
+    },
+    "samples": {
+      ".bias": [
+        "user_00/user00_2022-06-08_11-52-05.bias",
+        "user_00/user00_2022-06-08_11-53-45.bias",
+        "user_00/user00_2022-06-08_11-56-29.bias",
+        "user_00/user00_2022-06-08_11-57-02.bias",
+        "user_00/user00_2022-06-08_11-57-56.bias",
+        "user_00/user00_2022-06-08_11-58-34.bias",
+        "user_00/user00_2022-06-08_12-00-41.bias",
+        "user_00/user00_2022-06-08_12-01-19.bias"
+      ],
+      ".raw": [
+        "user_00/user00_2022-06-08_11-52-05.raw",
+        "user_00/user00_2022-06-08_11-53-45.raw",
+        "user_00/user00_2022-06-08_11-56-29.raw",
+        "user_00/user00_2022-06-08_11-57-02.raw",
+        "user_00/user00_2022-06-08_11-57-56.raw",
+        "user_00/user00_2022-06-08_11-58-34.raw",
+        "user_00/user00_2022-06-08_12-00-41.raw",
+        "user_00/user00_2022-06-08_12-01-19.raw"
+      ],
+      ".tmp_index": [
+        "user_04/user04_2022-06-08_15-37-17.raw.tmp_index",
+        "user_04/user04_2022-06-08_15-39-06.raw.tmp_index",
+        "user_07/user07_2022-06-10_11-33-04.raw.tmp_index",
+        "user_08/user08_2022-06-10_12-04-04.raw.tmp_index",
+        "user_09/user09_2022-06-10_12-19-46.raw.tmp_index",
+        "user_09/user09_2022-06-10_12-30-07.raw.tmp_index",
+        "user_13/user13_2022-06-13_12-48-47.raw.tmp_index",
+        "user_14/user14_2022-06-13_13-08-35.raw.tmp_index"
+      ]
+    },
+    "metadata": [],
+    "archives": []
+  }
+]

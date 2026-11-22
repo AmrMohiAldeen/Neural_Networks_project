@@ -1,0 +1,28 @@
+# Downloaded datasets and temporary download files
+/data/ekman6_videoemotion8/
+/data/google_drive_dataset/
+__pycache__/
+/third_party/
+/tmp/
+/data/raw/
+/data/events/
+/data/events_pilot/
+/logs/
+/artifacts/counts*/
+/artifacts/features*/
+/runs/
+/artifacts/baseline_smoke/
+/data/conversion_input/
+/data/conversion_tmp/
+/data/nefer_decoded*/
+/results/
+# Dataset archives and other large binaries anywhere in the repo
+*.zip
+*.tar.gz
+*.h5
+*.raw
+*.dat
+*.npz
+*.npy
+*.pt
+*.mp4
